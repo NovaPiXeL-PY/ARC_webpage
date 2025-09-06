@@ -9,8 +9,8 @@ export const sensorConfigs: SensorConfig[] = [
     unit: '°C',
     minValue: -10,
     maxValue: 50,
-    warningThreshold: 35,
-    criticalThreshold: 40
+    warningThreshold: 45,
+    criticalThreshold: 50
   },
   {
     id: 'SENS_002',
