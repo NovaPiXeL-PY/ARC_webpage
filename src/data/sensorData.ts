@@ -94,7 +94,7 @@ export const generateMockSensorData = (): SensorReading[] => {
         baseValue = 27 + (Math.random() - 0.5) * 5; // ~25–30 °C
         break;
       case 'Humidity':
-        baseValue = 75 + (Math.random() - 0.5) * 15; // ~65–85%
+        baseValue = 30 + (Math.random() - 0.5) * 15; // ~65–85%
         break;
       case 'PM2.5':
         baseValue = 30 + (Math.random() - 0.5) * 20; // ~20–40 µg/m³
