@@ -1,11 +1,14 @@
+import { SensorReading, SensorConfig } from '../types/sensor';
+
+// 📊 Sensor configurations for Hyderabad (September)
 export const sensorConfigs: SensorConfig[] = [
   {
     id: 'SENS_001',
     type: 'Temperature',
     name: 'Ambient Temperature',
     unit: '°C',
-    minValue: 20,             // cooler monsoon nights
-    maxValue: 35,             // September highs
+    minValue: 20,
+    maxValue: 35,
     warningThreshold: 32,
     criticalThreshold: 35
   },
@@ -14,7 +17,7 @@ export const sensorConfigs: SensorConfig[] = [
     type: 'Humidity',
     name: 'Relative Humidity',
     unit: '%',
-    minValue: 60,             // September always humid
+    minValue: 60,
     maxValue: 95,
     warningThreshold: 85,
     criticalThreshold: 95
@@ -34,7 +37,7 @@ export const sensorConfigs: SensorConfig[] = [
     type: 'PM2.5',
     name: 'Fine Particulate Matter',
     unit: 'µg/m³',
-    minValue: 10,             // rains wash out dust
+    minValue: 10,
     maxValue: 150,
     warningThreshold: 60,
     criticalThreshold: 100
@@ -65,7 +68,7 @@ export const sensorConfigs: SensorConfig[] = [
     name: 'Generated Water',
     unit: 'L',
     minValue: 0,
-    maxValue: 25,             // higher due to humidity collection
+    maxValue: 25,
     warningThreshold: 18,
     criticalThreshold: 22
   },
@@ -74,14 +77,14 @@ export const sensorConfigs: SensorConfig[] = [
     type: 'Solar Power',
     name: 'Solar Panel Output',
     unit: 'W',
-    minValue: 100,            // rainy/cloudy days
-    maxValue: 700,            // capped lower due to clouds
+    minValue: 100,
+    maxValue: 700,
     warningThreshold: 600,
     criticalThreshold: 700
   }
 ];
 
-
+// 🌦️ Generate mock September sensor readings
 export const generateMockSensorData = (): SensorReading[] => {
   return sensorConfigs.map(config => {
     let baseValue: number;
@@ -106,7 +109,7 @@ export const generateMockSensorData = (): SensorReading[] => {
         baseValue = 400 + (Math.random() - 0.5) * 200; // ~300–500 W
         break;
       case 'Water Level':
-        baseValue = 10 + Math.random() * 8; // ~10–18 L from condensation
+        baseValue = 10 + Math.random() * 8; // ~10–18 L
         break;
       default:
         baseValue = (config.minValue + config.maxValue) / 2;
@@ -125,3 +128,100 @@ export const generateMockSensorData = (): SensorReading[] => {
     };
   });
 };
+
+// ⚡ Sensor Data Manager
+export class SensorDataManager {
+  private data: Map<string, SensorReading> = new Map();
+  private listeners: ((data: SensorReading[]) => void)[] = [];
+  private updateInterval: NodeJS.Timeout | null = null;
+
+  constructor() {
+    const initialData = generateMockSensorData();
+    initialData.forEach(reading => {
+      this.data.set(reading.id, reading);
+    });
+  }
+
+  subscribe(callback: (data: SensorReading[]) => void) {
+    this.listeners.push(callback);
+    callback(Array.from(this.data.values()));
+
+    return () => {
+      const index = this.listeners.indexOf(callback);
+      if (index > -1) {
+        this.listeners.splice(index, 1);
+      }
+    };
+  }
+
+  startRealTimeUpdates(intervalMs: number = 5000) {
+    if (this.updateInterval) {
+      clearInterval(this.updateInterval);
+    }
+    this.updateInterval = setInterval(() => {
+      this.updateRandomSensor();
+    }, intervalMs);
+  }
+
+  stopRealTimeUpdates() {
+    if (this.updateInterval) {
+      clearInterval(this.updateInterval);
+      this.updateInterval = null;
+    }
+  }
+
+  updateSensor(sensorId: string, value: number) {
+    const existing = this.data.get(sensorId);
+    if (existing) {
+      const updated: SensorReading = {
+        ...existing,
+        value,
+        timestamp: new Date(),
+        status: 'active'
+      };
+      this.data.set(sensorId, updated);
+      this.notifyListeners();
+    }
+  }
+
+  private updateRandomSensor() {
+    const sensors = Array.from(this.data.keys());
+    const randomSensorId = sensors[Math.floor(Math.random() * sensors.length)];
+    const config = sensorConfigs.find(c => c.id === randomSensorId);
+
+    if (config) {
+      const baseValue = (config.minValue + config.maxValue) / 2;
+      const variation = (config.maxValue - config.minValue) * 0.3;
+      const newValue = Math.max(
+        config.minValue,
+        Math.min(
+          config.maxValue,
+          baseValue + (Math.random() - 0.5) * variation
+        )
+      );
+      this.updateSensor(randomSensorId, Math.round(newValue * 100) / 100);
+    }
+  }
+
+  getAllData(): SensorReading[] {
+    return Array.from(this.data.values());
+  }
+
+  getSensorById(id: string): SensorReading | undefined {
+    return this.data.get(id);
+  }
+
+  getSensorsByType(type: string): SensorReading[] {
+    return Array.from(this.data.values()).filter(
+      reading => reading.sensorType === type
+    );
+  }
+
+  private notifyListeners() {
+    const data = Array.from(this.data.values());
+    this.listeners.forEach(callback => callback(data));
+  }
+}
+
+// ✅ Export singleton instance so imports work
+export const sensorManager = new SensorDataManager();
