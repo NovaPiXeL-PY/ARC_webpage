@@ -65,19 +65,19 @@ const Impact = () => {
       name: "Dr. Rajesh Gupta",
       role: "Public Health Official, Mumbai",
       quote: "The installation in our community has shown measurable improvements in air quality indices. Residents report fewer respiratory issues.",
-      image: "https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=400"
+      image: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
     {
       name: "Sunita Devi",
       role: "Village Leader, Rajasthan",
       quote: "Having access to clean water and air in our village has been life-changing. Our children are healthier and happier.",
-      image: "https://images.pexels.com/photos/2280549/pexels-photo-2280549.jpeg?auto=compress&cs=tinysrgb&w=400"
+      image: "https://images.pexels.com/photos/1181424/pexels-photo-1181424.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
     {
       name: "Prof. Amit Sharma",
       role: "Environmental Science, IIT Delhi",
       quote: "This technology represents a breakthrough in sustainable environmental solutions. The data shows impressive real-world results.",
-      image: "https://images.pexels.com/photos/416322/pexels-photo-416322.jpeg?auto=compress&cs=tinysrgb&w=400"
+      image: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=400"
     }
   ];
 

@@ -10,7 +10,7 @@ const Blog = () => {
     date: "December 15, 2024",
     readTime: "8 min read",
     category: "Research",
-    image: "https://images.pexels.com/photos/2280549/pexels-photo-2280549.jpeg?auto=compress&cs=tinysrgb&w=800"
+    image: "https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=800"
   };
 
   const blogPosts = [
@@ -21,7 +21,7 @@ const Blog = () => {
       date: "December 10, 2024",
       readTime: "6 min read",
       category: "Education",
-      image: "https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=600"
+      image: "https://images.pexels.com/photos/459728/pexels-photo-459728.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       title: "Water Scarcity Solutions: From Vapor to Life-Giving Resource",
@@ -30,7 +30,7 @@ const Blog = () => {
       date: "December 5, 2024",
       readTime: "7 min read",
       category: "Technology",
-      image: "https://images.pexels.com/photos/459728/pexels-photo-459728.jpeg?auto=compress&cs=tinysrgb&w=600"
+      image: "https://images.pexels.com/photos/416322/pexels-photo-416322.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       title: "Community Success Story: Rural Village Transforms with Clean Technology",
@@ -39,7 +39,7 @@ const Blog = () => {
       date: "November 28, 2024",
       readTime: "5 min read",
       category: "Impact",
-      image: "https://images.pexels.com/photos/2280549/pexels-photo-2280549.jpeg?auto=compress&cs=tinysrgb&w=600"
+      image: "https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       title: "The Science Behind Algae Bioreactors: Nature's CO₂ Converters",
@@ -48,7 +48,7 @@ const Blog = () => {
       date: "November 20, 2024",
       readTime: "9 min read",
       category: "Research",
-      image: "https://images.pexels.com/photos/416322/pexels-photo-416322.jpeg?auto=compress&cs=tinysrgb&w=600"
+      image: "https://images.pexels.com/photos/2280549/pexels-photo-2280549.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       title: "Solar Power Integration: Maximizing Efficiency in Environmental Systems",
@@ -57,7 +57,7 @@ const Blog = () => {
       date: "November 15, 2024",
       readTime: "6 min read",
       category: "Technology",
-      image: "https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=600"
+      image: "https://images.pexels.com/photos/356036/pexels-photo-356036.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       title: "Youth Environmental Leadership Program Launches Nationwide",
@@ -66,7 +66,7 @@ const Blog = () => {
       date: "November 8, 2024",
       readTime: "4 min read",
       category: "Community",
-      image: "https://images.pexels.com/photos/459728/pexels-photo-459728.jpeg?auto=compress&cs=tinysrgb&w=600"
+      image: "https://images.pexels.com/photos/1205651/pexels-photo-1205651.jpeg?auto=compress&cs=tinysrgb&w=600"
     }
   ];
 

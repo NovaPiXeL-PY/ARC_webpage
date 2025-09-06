@@ -27,19 +27,19 @@ const Home = () => {
     },
     {
       icon: <BarChart3 className="h-8 w-8" />,
-      title: "Cleans 2400m³ Air/Day",
+      title: "Cleans 1200m³ Air/Day",
       description: "High-efficiency filtration for maximum impact"
     },
     {
       icon: <Sun className="h-8 w-8" />,
-      title: "13.77L Clean Water Daily",
+      title: "1.3L Clean Water Daily",
       description: "100% off-grid operation with renewable energy"
     }
   ];
 
   const stats = [
-    { number: "2400m³", label: "Air Cleaned Daily" },
-    { number: "13.77L", label: "Water Produced Daily" },
+    { number: "1200m³", label: "Air Cleaned Daily" },
+    { number: "1.3L", label: "Water Produced Daily" },
     { number: "100%", label: "Solar Powered" },
     { number: "24/7", label: "Monitoring" }
   ];
@@ -52,7 +52,7 @@ const Home = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=1920')"
+            backgroundImage: "url('https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?auto=compress&cs=tinysrgb&w=1920')"
           }}
         ></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
