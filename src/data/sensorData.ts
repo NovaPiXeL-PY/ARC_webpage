@@ -27,10 +27,10 @@ export const sensorConfigs: SensorConfig[] = [
     type: 'CO2',
     name: 'Carbon Dioxide',
     unit: 'ppm',
-    minValue: 400,
+    minValue: 0,
     maxValue: 2000,
-    warningThreshold: 1000,
-    criticalThreshold: 1500
+    warningThreshold: 400,
+    criticalThreshold: 1000
   },
   {
     id: 'SENS_004',
