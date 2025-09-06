@@ -38,8 +38,8 @@ const Home = () => {
   ];
 
   const stats = [
-    { number: "1200m³", label: "Air Cleaned Daily" },
-    { number: "1.3L", label: "Water Produced Daily" },
+    { number: "2400m³", label: "Air Cleaned Daily" },
+    { number: "13.77L", label: "Water Produced Daily" },
     { number: "100%", label: "Solar Powered" },
     { number: "24/7", label: "Monitoring" }
   ];
