@@ -8,25 +8,25 @@ const About = () => {
       name: "Gitanjali",
       role: "Founder and lead researcher",
       bio: "Environmental researcher specialized in sustainable technology development",
-      image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=400"
+      image: "https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
     {
       name: "Pratyush Yadav",
       role: "Lead Engineer",
       bio: "Specialist in IoT sensors and solar power systems for environmental monitoring",
-      image:"https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&w=400"
+      image: "https://images.pexels.com/photos/2280549/pexels-photo-2280549.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
     {
       name: "Monisha Aggarwal",
       role: "Biotechnology Researcher",
       bio: "Expert in algae bioreactors and sustainable water purification technologies",
-      image: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=400"
+      image: "https://images.pexels.com/photos/416322/pexels-photo-416322.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
     {
       name: "Divya Grover",
       role: "Community Outreach Director",
       bio: "Focused on implementing solutions in urban and rural communities across India",
-      image: "https://images.pexels.com/photos/1438081/pexels-photo-1438081.jpeg?auto=compress&cs=tinysrgb&w=400"
+      image: "https://images.pexels.com/photos/459728/pexels-photo-459728.jpeg?auto=compress&cs=tinysrgb&w=400"
     }
   ];
 

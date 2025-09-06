@@ -244,22 +244,22 @@ const HowItWorks = () => {
               {
                 title: "Air Filtration Process",
                 description: "Watch how our biochar and fly ash filters capture pollutants",
-                thumbnail: "https://images.pexels.com/photos/459728/pexels-photo-459728.jpeg?auto=compress&cs=tinysrgb&w=600"
+                thumbnail: "https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=600"
               },
               {
                 title: "Water Generation System",
                 description: "See the Peltier cooling system in action producing clean water",
-                thumbnail: "https://images.pexels.com/photos/416322/pexels-photo-416322.jpeg?auto=compress&cs=tinysrgb&w=600"
+                thumbnail: "https://images.pexels.com/photos/459728/pexels-photo-459728.jpeg?auto=compress&cs=tinysrgb&w=600"
               },
               {
                 title: "Algae Bioreactor Operation",
                 description: "Discover how our bioreactor converts CO₂ to valuable biomass",
-                thumbnail: "https://images.pexels.com/photos/2280549/pexels-photo-2280549.jpeg?auto=compress&cs=tinysrgb&w=600"
+                thumbnail: "https://images.pexels.com/photos/416322/pexels-photo-416322.jpeg?auto=compress&cs=tinysrgb&w=600"
               },
               {
                 title: "Real-time Monitoring Dashboard",
                 description: "Experience our sensor network and data visualization system",
-                thumbnail: "https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&w=600"
+                thumbnail: "https://images.pexels.com/photos/2280549/pexels-photo-2280549.jpeg?auto=compress&cs=tinysrgb&w=600"
               }
             ].map((video, index) => (
               <motion.div
